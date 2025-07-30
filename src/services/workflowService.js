@@ -25,7 +25,7 @@ export const saveWorkflow = async (workflow) => {
       headers: {
         'Content-Type': 'application/json',
         // Aquí puedes agregar headers de autenticación si es necesario
-        'Authorization': 'Bearer 4VKEhTALyaV3T9x0SfS7vhZJL50tA2yGdj9n2rvSGGkXdyaOw2QNBc3b2YtjLku/t46mGyrgh5EjsI8HjEhN8uOLUGKDwiBmyDA8WWBq/9K7wBxr81Z3t1FpZyO4EbDT4BDkicZNWnNSJV4oowLtR35B1uV59frnxVOdLXvnK0s6JucPJeXCj0d8FqDTCeXsrWoEVw0UXjetY8KAeffoytzvqR0UXRHcp2r68sM7ixfxx34SDduTJHBTmDSjZ1KMrhCEoCo8y1N6dG/r/0+Qc0QrlRlY6uyX2wq0JiIdQdJOwV/G/nBUJ7EFflmdeBY4sXeAzoCJIc3vFvJEZkIaWzaelQL9zdzKf6zZPyftS2/jbu6XQYLTXelT6Q2u0wjBdP9QNYolSQ69AQkrvNd6Fw==',
+        'Authorization': 'Bearer pxuKEuJFNqZpz+gcV6qkuN2Tdi1//k3iz3G/xMQxzwJPSeH8lKQ7BKzhXKgC8kxdDsvpYQ4gW8xBkypUjB7muyIYTcwmWMKjBxDvbWmmaedttEvcYaSaeEzOxy3V2vcikDTNquzbOnDX4fb/cOkZ1b7sBQzqKETLZy93VVnZ3QaX6CCMBOL3JMJZbrIl2jSSQsktfxgKxaANGPFZhU4oH0SFoQJuYbG39kuwnZHo9AI7RDDHY8jiAw+vQYW15EZ+XGYX/PTzljafov+To30eU9y85hD4fWdSVD8FyMbSJYP0DuDdyJ0HAkpdt4P5X9W/wl5ZpavYEVqZtQA13U/41cj19iN1Y5q6KJ3oWE7XkVJ2qhjY8FDzvh4PtUML1KwLaWuj669O564nH0mcWx6S8w==',
       },
       body: JSON.stringify(workflow),
     });

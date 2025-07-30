@@ -19,15 +19,15 @@
  */
 export const createWorkflowModel = (data = {}) => {
   return {
-    id: data.id_wf || null, // Será null para nuevos workflows
-    nombre: data.name_wf,
-    descripcion: data.description_wf,
-    color: data.bg_color,
-    variante: data.variant,
-    creadoPor: data.created_by, // Usuario actual o valor predeterminado
-    status: data.status_wf, // Valores permitidos: 'active', 'draft', 'archived'
-    fechaCreacion:data.created_at, //Fecha de creación
-    fechaActualiza: data.updated_at
+    //id: data.id_wf || null, // Será null para nuevos workflows
+    Name: data.name_wf,
+    Description: data.description_wf,
+    BgColor: data.bg_color,
+    Variant: data.variant
+    // creadoPor: data.created_by, // Usuario actual o valor predeterminado
+    // status: data.status_wf, // Valores permitidos: 'active', 'draft', 'archived'
+    // fechaCreacion:data.created_at, //Fecha de creación
+    // fechaActualiza: data.updated_at
     // created_at y updated_at se manejarán en el backend
   };
 };
@@ -40,13 +40,13 @@ export const createWorkflowModel = (data = {}) => {
 export const validateWorkflow = (workflow) => {
   const errors = {};
   
-  if (!workflow.nombre) {
-    errors.nombre = 'El nombre del workflow es obligatorio';
+  if (!workflow.Name) {
+    errors.Name = 'El nombre del workflow es obligatorio';
   }
   
-  if (workflow.status && !['active', 'draft', 'archived'].includes(workflow.status)) {
-    errors.status = 'El estado debe ser: active, draft o archived';
-  }
+  // if (workflow.status && !['active', 'draft', 'archived'].includes(workflow.status)) {
+  //   errors.status = 'El estado debe ser: active, draft o archived';
+  // }
   
   return {
     isValid: Object.keys(errors).length === 0,

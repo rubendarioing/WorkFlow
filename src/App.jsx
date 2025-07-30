@@ -23,7 +23,7 @@ import ControlPanel from './components/ControlPanel';
 import { nodeTypes } from './nodes/nodeTypes';
 
 // Datos iniciales
-import { initialNodes } from './data/initialData';
+import { initialNodes } from './data/nodes';
 import { nodeTemplates } from './data/nodeTemplates';
 import { nodeAccionesTemplates } from './data/nodeAccionesTemplates';
 
@@ -116,7 +116,7 @@ export default function App() {
       variant,
       lastModified: new Date().toISOString()
     };
-    
+    console.log('Guardando workflow RR:', workflowData);
     // Save to localStorage
     const savedWorkflows = JSON.parse(localStorage.getItem('savedWorkflows') || '[]');
     const updatedWorkflows = [...savedWorkflows, workflowData];

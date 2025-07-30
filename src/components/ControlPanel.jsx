@@ -98,17 +98,16 @@ function ControlPanel({
       // Create the workflow model as a local variable
       const createWorkflowModel = {
         id: 0, // Será null para nuevos workflows
-        nombre: workflowName || '',  //Nombre del workflow
-        descripcion: description || '', //Descripción del workflow
-        color: bgColor || '#ffffff', //Color de fondo
-        variante: variant || 'default', //Variante
-        creadoPor: 'system', // Usuario actual o valor predeterminado
-        status: 'active', // Valores permitidos: 'active', 'draft', 'archived'
-        fechaCreacion: new Date().toISOString(), //Fecha de creación
-        fechaActualiza: new Date().toISOString() //Fecha de actualización
+        Name: workflowName || '',  //Nombre del workflow
+        Description: description || '', //Descripción del workflow
+        BgColor: bgColor || '#ffffff', //Color de fondo
+        Variant: variant || 'default', //Variante
+        Nodes: nodes,
+        Edges: edges
       }
      
       console.log('Datos del workflowData a guardar:', workflowData);
+      console.log('Datos del createWorkflowModel a guardar:', createWorkflowModel);
       
       // Llamar al servicio para guardar
       const result = await saveWorkflow(createWorkflowModel);
